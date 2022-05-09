@@ -1,7 +1,8 @@
+<mat-slide-toggle *ngIf="passagers.length" (change)="onToggleSlideChange($event)"></mat-slide-toggle>
 <table>
     <tbody>
-        <tr *ngFor="let passager of passagers; let i = index">
-            <td><img [src]="passager.image"></td>
+        <tr *ngFor="let passager of passagers; let i = index" [matTooltip]="passager.email">
+            <td><img [src]="passager.image" [ngClass]="{'blured': blurPictures}"></td>
             <td>{{ passager.nom }}</td>
             <td [appClasseVol]="passager.classeVol">{{ passager.classeVol }}</td>
             <td [appMaxBagages]="passager">
