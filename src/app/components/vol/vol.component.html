@@ -1,1 +1,16 @@
-<!-- Affichage d'un vol -->
+<div class="vol">
+	<div>
+		<mat-icon *ngIf="type === 'decollages'">flight_takeoff</mat-icon>
+		<mat-icon *ngIf="type === 'atterrissages'">flight_land</mat-icon>
+	</div>
+	<div>{{vol.icao}}</div>
+	<div>{{vol.matricule}}</div>
+	<div class="itineraire">
+		{{vol.aeroportDepart}}
+		<mat-icon class="fleche">arrow_right_alt</mat-icon>
+		{{vol.aeroportArrivee}}
+	</div>
+	<div>
+		<img class="logo-compagnie" [src]="'/assets/' + vol.compagnie + '.png'">
+	</div>
+</div>

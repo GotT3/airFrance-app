@@ -1,0 +1,16 @@
+.blured {
+	filter: blur(8px);
+	-webkit-filter: blur(8px);
+}
+
+.passager {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.bagages {
+	display: flex;
+	align-items: center;
+}

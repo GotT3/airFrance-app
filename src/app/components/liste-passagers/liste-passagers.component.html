@@ -1,13 +1,9 @@
-<mat-slide-toggle *ngIf="passagers.length" (change)="onToggleSlideChange($event)"></mat-slide-toggle>
-<table>
-    <tbody>
-        <tr *ngFor="let passager of passagers; let i = index" [matTooltip]="passager.email">
-            <td><img [src]="passager.image" [ngClass]="{'blured': blurPictures}"></td>
-            <td>{{ passager.nom }}</td>
-            <td [appClasseVol]="passager.classeVol">{{ passager.classeVol }}</td>
-            <td [appMaxBagages]="passager">
-                <mat-icon>work</mat-icon>x{{passager.nbBagagesSoute}}
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div *ngIf="passagers.length" class="displayPhotos">
+	<p class="displayText">
+		Afficher les photos : 
+	</p>
+	<mat-slide-toggle (change)="onToggleSlideChange($event)"></mat-slide-toggle>
+</div>
+<div class="liste-passager">
+    <app-passager *ngFor="let passager of passagers; let i = index" [passager]="passager" [blurPicture]="blurPictures"></app-passager>
+</div>

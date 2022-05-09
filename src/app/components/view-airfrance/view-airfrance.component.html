@@ -6,7 +6,7 @@
         <app-filtres (filtresEvent)="onFiltresEvent($event)"></app-filtres>
       </div>
       <div class="bottom">
-        <app-liste-vols [vols]="vols" (onVolSelected)="onVolSelectedEvent($event)"></app-liste-vols>
+        <app-liste-vols [vols]="vols" (onVolSelected)="onVolSelectedEvent($event)" [type]="type"></app-liste-vols>
       </div>
     </div>
     <div class="right">

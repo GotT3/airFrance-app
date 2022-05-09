@@ -1,4 +1,13 @@
-.blured {
-	filter: blur(8px);
-	-webkit-filter: blur(8px);
+.liste-passager {
+	width: 90%;
+}
+
+.displayPhotos {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.displayText {
+	margin: 0;
 }

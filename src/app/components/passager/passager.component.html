@@ -1,1 +1,8 @@
-<!-- Affichage d'un passager -->
+<div class="passager">
+	<div><img [src]="passager.image" [ngClass]="{'blured': blurPicture}"></div>
+	<div [matTooltip]="passager.email">{{ passager.nom }}</div>
+	<div [appClasseVol]="passager.classeVol">{{ passager.classeVol }}</div>
+	<div [appMaxBagages]="passager" class="bagages">
+		<mat-icon>work</mat-icon>x{{passager.nbBagagesSoute}}
+	</div>
+</div>

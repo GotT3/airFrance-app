@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Passager } from 'src/app/models/passager.model';
 
 @Component({
   selector: 'app-passager',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./passager.component.scss']
 })
 export class PassagerComponent {
-
+	@Input() passager!: Passager;
+	@Input() blurPicture!: boolean;
 }

@@ -1,0 +1,31 @@
+:host {
+	width: 100%;
+}
+
+.itineraire {
+	display:flex;
+	align-items: center;
+}
+
+.vol {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.fleche {
+	position: relative;
+	bottom: 2px;
+}
+
+.vol:hover {
+    opacity: 60%;
+    cursor: pointer;
+}
+
+.logo-compagnie {
+    max-width: 150px;
+	position: relative;
+	bottom: 2px;
+}
