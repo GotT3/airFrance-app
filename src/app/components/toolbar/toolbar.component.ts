@@ -10,12 +10,4 @@ export class ToolbarComponent {
 
   constructor(private _router: Router) { }
 
-  toDecollages(): void {
-    this._router.navigateByUrl(`/decollages`);
-  }
-
-  toAtterrisages(): void {
-    // TODO
-  }
-
 }

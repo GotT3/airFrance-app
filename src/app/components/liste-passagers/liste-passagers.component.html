@@ -1,3 +1,12 @@
-<!-- Affichage de la liste des passagers -->
-
-
+<table>
+    <tbody>
+        <tr *ngFor="let passager of passagers; let i = index">
+            <td><img [src]="passager.image"></td>
+            <td>{{ passager.nom }}</td>
+            <td [appClasseVol]="passager.classeVol">{{ passager.classeVol }}</td>
+            <td [appMaxBagages]="passager">
+                <mat-icon>work</mat-icon>x{{passager.nbBagagesSoute}}
+            </td>
+        </tr>
+    </tbody>
+</table>

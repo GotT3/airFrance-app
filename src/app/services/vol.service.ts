@@ -24,6 +24,14 @@ export class VolService {
     ));
   }
 
+  getVolsArrivee(code: string, debut: number, fin: number): Observable<Vol[]> {
+    return this.http.get<any>(`https://opensky-network.org/api/flights/arrival?airport=${code}&begin=${debut}&end=${fin}`).pipe(
+      map((response) => response
+        .filter((dto: IVolDto) => this._estUnVolAirFrance(dto))
+        .map((dto: IVolDto) => new Vol(dto))
+    ));
+  }
+
   private _estUnVolAirFrance(dto: IVolDto): boolean {
     return !!Object.keys(COMPAGNIES).find((key$) =>
       dto.callsign.includes(key$)

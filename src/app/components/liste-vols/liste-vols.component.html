@@ -1,1 +1,20 @@
-<!-- Affichage de la liste des vols -->
+<table class="liste-vols">
+    <tbody>
+        <tr *ngFor="let vol of vols; let i = index" (click)="onClick(i)">
+            <td>
+                <mat-icon *ngIf="type === 'decollages'">flight_takeoff</mat-icon>
+                <mat-icon *ngIf="type === 'atterrissages'">flight_land</mat-icon>
+            </td>
+            <td>{{vol.icao}}</td>
+            <td>{{vol.matricule}}</td>
+            <td>
+                {{vol.aeroportDepart}}
+                <mat-icon>arrow_right_alt</mat-icon>
+                {{vol.aeroportArrivee}}
+            </td>
+            <td>
+                <img class="logo-compagnie" [src]="'/assets/' + vol.compagnie + '.png'">
+            </td>
+        </tr>
+    </tbody>
+</table>

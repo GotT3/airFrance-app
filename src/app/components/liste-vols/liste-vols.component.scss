@@ -1,0 +1,17 @@
+.liste-vols {
+    width: 100%;
+}
+
+table {
+    border: none;
+    border-collapse: collapse;
+}
+
+tr:hover {
+    background-color: grey;
+    cursor: pointer;
+}
+
+.logo-compagnie {
+    max-width: 200px;
+}
