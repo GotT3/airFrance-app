@@ -9,5 +9,5 @@ import {MatIconModule} from '@angular/material/icon';
 })
 export class VolComponent {
 	@Input() vol!: Vol;
-	@Input() type: string = "salut";
+	@Input() type!: string;
 }
